@@ -1,0 +1,45 @@
+attach(book2)
+
+par(mfrow=c(3,1)) # This(par) allows us to modify low-level plotting functions. In 
+this case changing the graphical device(the palette) to have 3 rows and 1 column, so
+we can put three plots on it.
+
+plot(`Sony playstation 3(in million)`,main = "")
+plot(`Sony playstation 4(in million)`)
+plot(`Xbox360(in million)`)
+
+# Now lets look for the boxplot
+# To see the statistics of boxplot which provides us the minimum, first quartile,
+median, mean, third quartile and maximum.
+
+summary(`Sony playstation 3(in million)`)
+summary(`Sony playstation 4(in million)`)
+summary(`Xbox360(in million)`)
+
+par(mfrow=c(3,1)) # This(par) allows us to modify low-level plotting functions. In 
+this case changing the graphical device(the palette) to have 3 rows and 1 column, so
+we can put three plots on it.
+boxplot(`Sony playstation 3(in million)`,horizontal = T, main = "Boxplot of Playstation3",
+xlab="Global unit sale (in million)",col = ("red"))
+boxplot(`Sony playstation 4(in million)`,horizontal = T, main = "Boxplot of Playstation4",
+xlab="Global unit sale (in million)",col = ("blue"))
+boxplot(`Xbox360(in million)`,horizontal = T, main = "Boxplot of Xbox360",
+xlab="Global unit sale (in million)",col = ("green"))
+
+# Now lets look for the histogram
+#To see simply the histogram
+hist(`Sony playstation 3(in million)`)
+hist(`Sony playstation 4(in million)`)
+hist(`Xbox360(in million)`)
+
+# But if you want some modification in these histogram then,
+par(mfrow=c(3,1))# This(par) allows us to modify low-level plotting functions. In 
+this case changing the graphical device(the palette) to have 3 rows and 1 column, so
+we can put three plots on it.
+
+hist(`Sony playstation 3(in million)`,main = "Histogram of Playstation 3",xlab = 
+"Global unit sale (in million)",col = c("red","blue","green"),)
+hist(`Sony playstation 4(in million)`,main = "Histogram of Playstation 4",xlab = 
+"Global unit sale (in million)",col = c("red","blue","green"),)
+hist(`Xbox360(in million)`,main = "Histogram of Xbox360",xlab = "Global 
+unit sale (in million)",col = c("red","blue","green"),)
